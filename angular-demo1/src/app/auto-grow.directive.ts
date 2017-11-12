@@ -1,4 +1,4 @@
-import { Directive, ElementRrf, Renderer } from '@angular/core';
+import { Directive, ElementRef, Renderer } from '@angular/core';
 
 @Directive({
   selector: '[appAutoGrow]',
@@ -9,7 +9,7 @@ import { Directive, ElementRrf, Renderer } from '@angular/core';
 })
 export class AutoGrowDirective {
 
-  constructor(private el: ElementRrf, private renderer: Renderer) {
+  constructor(private el: ElementRef, private renderer: Renderer) {
     
     
   }
