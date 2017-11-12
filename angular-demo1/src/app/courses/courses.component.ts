@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { CoursesService } from '../courses.service'
+import { CoursesService } from '../courses.service';
+import {AutoGrowDirective} from '../auto-grow.directive';
 
 @Component({
   selector: 'app-courses',
@@ -13,9 +14,9 @@ export class CoursesComponent implements OnInit {
   courses;
 
   constructor(courseService: CoursesService) {
-    
     this.courses=courseService.getCourses();
   }
+  
 
   ngOnInit() {
   }
