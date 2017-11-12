@@ -13,10 +13,14 @@ export class CoursesComponent implements OnInit {
   title = "The title of courses page";
   courses;
 
-  constructor(courseService: CoursesService) {
+  constructor(private courseService: CoursesService) {
     this.courses=courseService.getCourses();
   }
   
+  AddCourse(newCourse: string){
+   this.courseService.saveCourses(newCourse);
+   this.courses = this.courseService.getCourses();
+  }
 
   ngOnInit() {
   }

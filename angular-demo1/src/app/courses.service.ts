@@ -2,17 +2,17 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CoursesService {
+  courseArray :string[];
 
-  constructor() { }
-  getCourses() : string[]{
-       return ["Course1","Course2", "Course3"];
+  constructor() { 
+    this.courseArray= ["Course1","Course2", "Course3"];
   }
-  
+  getCourses() : string[]{
+       return this.courseArray;
+  }
   saveCourses(newCourse: string)
   {
-    this.courses = this.getCourses();
-    this.courses.push(newCourse);
-    
+    this.courseArray.push(newCourse);
   }
 
 }
